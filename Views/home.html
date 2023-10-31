@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lego Collection</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar bg-base-100">
+      <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="/"
+          >Lego Collection</a
+        >
+      </div>
+
+      <div class="navbar-center hidden sm:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="/about">About</a></li>
+          <li>
+            <details>
+              <summary>Theme</summary>
+              <ul class="p-2 bg-base-100 right-0">
+                <li><a href="/lego/sets?theme=Space Mini-Figures">Space Mini-Figures</a></li>
+                <li><a href="/lego/sets?theme=Castle 2 for 1 Bonus Offer">Castle 2 for 1 Bonus Offer</a></li>
+                <li>
+                  <a href="/lego/sets?theme=The Majestic Horse">The Majestic Horse</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container mx-auto">
+      <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Welcome</h1>
+            <p class="py-6">
+              Explore a Vast Collection of Lego Items that suits your kids
+              taste!
+            </p>
+            <a href="lego/sets" class="btn btn-primary"
+              >Click to View Collection</a
+            >
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="w-full"
+              src="https://cdn.rebrickable.com/media/sets/005-1.jpg"
+              alt="Basic Building Set in Cardboard"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">The Majestic Horse</h2>
+            <p>
+                There are 9 parts in this inventory, with 35 total quantity. 
+                The approximate cost of these parts is CA$4.22 
+            </p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/005-1" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="w-full"
+              src="https://cdn.rebrickable.com/media/sets/010-1.jpg"
+              alt="Basic Building Set in Cardboard"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Wheel Set</h2>
+            <p>
+                There are 13 parts in this inventory, with 57 total quantity. 
+                The approximate cost of these parts is CA$10.81
+            </p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/010-1" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="w-full"
+              src="https://cdn.rebrickable.com/media/sets/010423-1.jpg"
+              alt="The Majestic Horse"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Castle 2 for 1 Bonus Offer</h2>
+            <p>
+                Designed by previous 2017 Lego Masters UK winners Nathan Dias and Steve Guinness.
+                Given to select members of the Recognised Lego Fan Media group for an April fools 
+                prank in 2023, only around 10 are known to exist.</p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/010423-1" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
