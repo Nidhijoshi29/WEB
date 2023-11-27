@@ -27,7 +27,7 @@
     <div class="overflow-x-auto overflow-y-hidden">
       <table class="table table-zebra">
         <tbody>
-          <% set.forEach(item => { %>
+          <% sets.forEach(item => { %>
           <tr>
             <td>
               <div class="avatar">
@@ -35,7 +35,7 @@
               </div>
             </td>
             <td>
-              <%= item.name %> | <a href="/lego/sets?theme=<%= item.theme %>" class="btn mt-2 btn-xs"><%= item.theme %></a>
+              <%= item.name %> | <a href="/lego/sets?theme=<%= item.Theme.name %>" class="btn mt-2 btn-xs"><%= item.Theme.name %></a>
             </td>
             <td>
               <span class="font-bold">Year:</span> <%= item.year %> - <span class="font-bold">Parts:</span> <%= item.num_parts %>

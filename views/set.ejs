@@ -25,12 +25,13 @@
       </figure>
       <div class="card-body">
         <div class="text-center ">
-          <p><span class="font-bold">Year:</span> <%= set.year %> | <span class="font-bold">Theme:</span> <%= set.theme %></p>
+          <p><span class="font-bold">Year:</span> <%= set.year %> | <span class="font-bold">Theme:</span> <%= set.Theme.name %></p>
           <p><span class="font-bold">Parts:</span> <%= set.num_parts %></p>
         </div>
         <div class="text-center my-6" id="quote">
         </div>
         <div class="card-actions justify-center">
+          <a class="btn btn-primary" href="/lego/editSet/<%= set.set_num %>">Edit</a>
           <a href="#" onclick="history.back(); return false;" class="btn btn-primary">return</a>
         </div>
       </div>
