@@ -1,25 +1,69 @@
-<header class="navbar bg-base-100">
-    <div class="flex-1">
-      <a class="btn btn-ghost normal-case text-xl" href="/">Lego Collection</a>
-    </div>
-    <div class="dropdown">
-      <label tabindex="0" class="btn btn-ghost sm:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </label>
-      <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a class="<%= (page == '/lego/sets') ? 'active' : '' %>" href="/lego/sets">View Collection</a></li>
-        <li><a class="<%= (page == '/lego/addSet') ? 'active' : '' %>" href="/lego/addSet">Add to Collection</a></li>
-        <li><a class="<%= (page == '/about') ? 'active' : '' %>" href="/about">About</a></li>
-      </ul>
-    </div>
- 
-    <div class="navbar-center hidden sm:flex">
-      <ul class="menu menu-horizontal px-1">
-        <li><a class="<%= (page == '/lego/sets') ? 'active' : '' %>" href="/lego/sets">View Collection</a></li>
-        <li><a class="<%= (page == '/lego/addSet') ? 'active' : '' %>" href="/lego/addSet">Add to Collection</a></li>
-        <li><a class="<%= (page == '/about') ? 'active' : '' %>" href="/about">About</a></li>
-      </ul>
-    </div>
-  </header>
+<div class="navbar sticky top-0 z-10">
+  <div class="flex-1">
+      <a class="<%= (page == "/") ? 'active' : '' %> btn btn-ghost normal-case text-3xl" href="/">Home of Lego Collection</a>
+  </div>
+  <div class="dropdown">
+    <label tabindex="0" class="btn btn-ghost sm:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </label>
+    <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow rounded-box w-52">
+      <li><a class="<%= (page == "/lego/sets") ? 'active' : '' %> text-2xl" href="/lego/sets">View Collection</a></li>
+      <li><a class="<%= (page == "/about") ? 'active' : '' %> text-xl" href="/about">About</a></li>
+      <% if (session.user) { %>
+         <li> 
+          <details>
+            <summary class="text-xl">Account: <%= session.user.userName %></summary>
+            <ul class="p-2 right-0 text-xl">
+              <li><a class="<%= (page == "/lego/addSet") ? 'active' : '' %> text-xl" href="/lego/addSet">Add to Collection</a></li>
+              <li><a class="<%= (page == "/userHistory") ? 'active' : '' %> text-xl" href="/userHistory">User History</a></li>
+              <li><a class="text-xl" href="/logout">Log Out</a></li>
+            </ul>
+          </details>
+        </li> 
+        <% } else { %>
+         <li> 
+          <details>
+            <summary class="text-xl">Account</summary>
+            <ul class="p-2 right-0 text-xl">
+              <li><a class="<%= (page == "/login") ? 'active' : '' %> text-xl" href="/login">Login</a></li>
+              <li><a class="<%= (page == "/register") ? 'active' : '' %> text-xl" href="/register">Register</a></li>
+            </ul>
+          </details>
+         </li>
+        <% } %>
+      
+      
+    </ul>
+  </div>
+
+  <div class="navbar-center hidden sm:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a class="<%= (page == "/lego/sets") ? 'active' : '' %> text-2xl" href="/lego/sets">View Collection</a></li>
+      <li><a class="<%= (page == "/about") ? 'active' : '' %> text-2xl" href="/about">About</a></li>
+    <% if (session.user) { %>
+       <li> 
+        <details>
+          <summary class="text-2xl">Account: <%= session.user.userName %></summary>
+          <ul class="p-2 right-0 text-xl">
+            <li><a class="<%= (page == "/lego/addSet") ? 'active' : '' %> text-2xl" href="/lego/addSet">Add to Collection</a></li>
+            <li><a class="<%= (page == "/userHistory") ? 'active' : '' %> text-2xl" href="/userHistory">User History</a></li>
+            <li><a class="text-2xl" href="/logout">Log Out</a></li>
+          </ul>
+        </details>
+       </li> 
+      <% } else { %>
+      <li>
+        <details>
+          <summary class="text-2xl">Account</summary>
+          <ul class="p-2 right-0 text-xl">
+            <li><a class="<%= (page == "/login") ? 'active' : '' %> text-2xl" href="/login">Login</a></li>
+            <li><a class="<%= (page == "/register") ? 'active' : '' %> text-2xl" href="/register">Register</a></li>
+          </ul>
+        </details>
+       </li>
+      <% } %>
+    </ul>
+  </div>
+</div>
